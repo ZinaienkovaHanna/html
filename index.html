@@ -7,7 +7,107 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello HTML!</h1>
-    <img src="./img/1006.jpg" width="300" alt="">
+    <div class="wrapper">
+        <h1>Hello HTML!</h1>
+        <img src="./img/1006.jpg" width="400" alt="">
+        <div class="form">
+          <form action="#" id="form" class="form__body">
+            <h1 class="form__title">Sending data to mail</h1>
+            <div class="form__item">
+              <label for="forName" class="form__label">Name*:</label>
+              <input id="forName" type="text" name="name" class="form__input" />
+            </div>
+            <div class="form__item">
+              <label for="forEmail" class="form__label">E-mail*:</label>
+              <input id="forEmail" type="text" name="email" class="form__input" />
+            </div>
+            <div class="form__item">
+              <div class="form__label">Left-handed or right-handed?</div>
+              <!-- создаем радио кнопки правша,левша -->
+              <div class="options">
+                <div class="options__item">
+                  <!-- чтобы связать элементы  id="formRightHanded" и id="formRightHanded" -->
+                  <input
+                    id="formRightHanded"
+                    checked
+                    type="radio"
+                    value="right"
+                    name="hand"
+                    class="options__input"
+                  />
+                  <label id="formRightHanded" class="options__label"
+                    >right-handed:</label
+                  >
+                </div>
+                <div class="options__item">
+                  <input
+                    id="formLeftHanded"
+                    type="radio"
+                    value="left"
+                    name="hand"
+                    class="options__input"
+                  />
+                  <label for="formLeftHanded" class="options__label"
+                    >Left-handed:</label
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- поле для ввода сообщений -->
+            <div class="form__item">
+              <label for="forMessage" class="form__label">Message:</label>
+              <textarea
+                name="message"
+                id="forMessage"
+                class="form__input"
+              ></textarea>
+            </div>
+            <!-- выпадающий список для выбора возраста -->
+            <div class="form__item">
+              <div class="form__label">Age:</div>
+              <select name="age" id="" class="select">
+                <option value="from 18 to 25" selected>young</option>
+                <option value="from 25 to 45">adult</option>
+                <option value="from 45">mature</option>
+              </select>
+            </div>
+            <!-- пользователь добавляет фотографию -->
+            <div class="form__item">
+              <div class="form__label">Attach a photo</div>
+              <div class="file">
+                <div class="file__item">
+                  <input
+                    id="formImage"
+                    accept=".jpg, .png, .gif"
+                    type="file"
+                    name="image"
+                    class="file__input"
+                  />
+                  <!-- бутафорная кнопка для стилизации -->
+                  <div class="file__button">Select</div>
+                </div>
+                <div class="file__preview"></div>
+              </div>
+            </div>
+            <div class="form__item">
+              <!-- блок с запросом на обработку данных -->
+              <div class="checkbox">
+                <input
+                  id="formAgreement"
+                  checked
+                  type="checkbox"
+                  name="agreement"
+                  class="checkbox__input"
+                />
+                <label for="formAgreement" class="checkbox__label"
+                  >I give my consent to the processing of personal data in
+                  accordance with <a href="#">the terms</a></label
+                >
+              </div>
+            </div>
+            <button type="submit" class="form__button">send</button>
+          </form>
+        </div>
+      </div>
 </body>
 </html>
